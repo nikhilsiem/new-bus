@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #map-canvas {
+    height: 800px;
+    width: 1400px;
+    background-color: #CCC;
+}
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"> GPS Tracking System</h1>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
+    <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCclG7w5m1rAyb_KxV8cp2eY4FsTtTm7Bs&libraries=drawing&callback=initMap">
+</script>
+    <div id="map-canvas"></div>
+    <script>
+        function initialize() {
+            var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Silk Board</h1>'+
+      '<div id="bodyContent">'+
+      '<p>Silk board bus stand, Central Silk Board Colony, Stage 2, BTM Layout, Bengaluru, Karnataka 560068</p>'+
+      '</div>'+
+      '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+var myLatLng = new google.maps.LatLng(12.9218539, 77.6164756),
+    myOptions = {
+        zoom: 15,
+        center: myLatLng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    },
+    map = new google.maps.Map(document.getElementById('map-canvas'), myOptions),
+    marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map
+    });
+
+marker.setMap(map);
+marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+
+moveMarker(map, marker);
+}
+function moveMarker(map, marker) {
+
+//delayed so you can see it move
+setTimeout(function () {
+    marker.setPosition(new google.maps.LatLng(12.9218539, 77.6164756));
+    map.panTo(new google.maps.LatLng(12.9218539, 77.6164756));
+
+}, 1500);
+
+};
+
+initialize();
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: url(back1.jpg);
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: #f7f7f7;
+}
+
+/* for bits logo */
+.bits img{
+  float: left;
+  height: 100px;
+
+ }
+
+.header h1 {
+  font-size: 50px;
+  color: black;
+}
+
+.header h2 {
+	color: black;
+	    text-align: center;
+    margin: auto 0;
+
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.card h2, h3, h5{
+	color: white;
+}
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 100%;
+}
+
+
+/* Fake image */
+.fakeimg {
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 20px;
+  height:230px;
+
+}
+
+.fakeimg p{
+	color: black;
+}
+/* Add a card effect for articles */
+.card {
+  background-color: black;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: black;
+  margin-top: 20px;
+}
+
+.footer h2{
+	color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 650px; /* Should be removed. Only for demonstration */
+  background: #30475e;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column h2,p{
+	color: white;
+} 
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="bits">
+  <img src="bits.png">
+</div>
+
+
+
+<div class="header">
+  <h2>Capstone Project for PGP IoT</h2>
+  <h1>IOT Based Bus Tracking System</h1>
+</div>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="tracker.html">Live Tracking</a>
+  <a href="#">Load Management</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h3>FEATURES</h3>
+      <div class="fakeimg">
+      	<P>1.	Bus arrival time tracking at each bus stop</P>
+		<P>2.	Online information about No. of seats occupied/vacant at a particular bus stop</P>
+		<P>3.	Monitoring Actual location of the bus on the route</P>
+		<P>4.	Traffic load analysis for a route, for whole day</P>
+		<P>5.	Emergency button for any extreme situation</P>
+		<P>6.	Central monitoring by Control Room</P>
+      	
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container"> 
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="bus.jpg" alt="Bus" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="control room.jpg" alt="Control Room" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="driver.jpg" alt="Driver" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+<div class="footer">
+  <h2>PROJECT BY</h2>
+  <h3>Group Number : 3</h3>
+  <div class="row">
+  <div class="column" style="background-color: black;">
+  	<div class="memimg">
+  	<img src="papa.jpeg">
+    <h2>Cherukumilli K Sudheer</h2>
+    <p>2018CIOT508</p>
+    </div>
+    <div class="memimg">
+    <img src="chandra.jpeg">
+    <h2>Chandra Sekhar G</h2>
+    <p>2018CIOT525</p>
+	</div>
+  </div>
+  <div class="column" style="background-color: black; margin-top: 100px;">
+  	<div class="memimg">
+  	<img src="papa.jpeg">
+    <h2>Vijay Narayan Singh</h2>
+    <p>2018CIOT544</p>
+	</div>
+  </div>
+  <div class="column" style="background-color: black;">
+    <div class="meming">
+    <img src="papa.jpeg">
+    <h2>Arun Karthik B </h2>
+    <p>2018CIOT522</p>
+	</div>
+	<div class="meming">
+	<img src="papa.jpeg">
+    <h2>S Poojitha Kakulavarapu</h2>
+    <p>2018CIOT548</p>
+	</div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
